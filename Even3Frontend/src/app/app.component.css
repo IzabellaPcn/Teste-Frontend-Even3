@@ -1,0 +1,19 @@
+app-root {
+    font-family: Arial;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ed1d24;
+}
+nav {
+    width: 400px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 17px;
+}
+nav > a {
+    color: white;
+    text-decoration: none;
+}

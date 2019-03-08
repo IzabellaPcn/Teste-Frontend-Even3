@@ -1,0 +1,29 @@
+<div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center">
+  <div *ngFor="let comic of comics_more;" class="card" style="margin: 10px; width: 300px; height: 450px;">
+    <img class="card-img-top" [src]="comic.thumbnail.path.concat('/portrait_uncanny.jpg')" alt="Card image cap">
+    <div class="card-body comic-card">
+      <h5 class="card-title">{{ comic.title }}</h5>
+      <p class="card-text"></p>
+      <button (click)="openModal(comic)" data-toggle="modal" data-target="#comicModal">Ver Quadrinho</button>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="current_comic" class="modal fade" id="comicModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">{{ current_comic.title }}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Formato: {{ current_comic.format }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }" [template]="customLoadingTemplate"></ngx-loading>
+

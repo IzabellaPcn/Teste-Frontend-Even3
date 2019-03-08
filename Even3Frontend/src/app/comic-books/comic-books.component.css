@@ -1,0 +1,23 @@
+.comic-card {
+    display: flex;
+    flex-direction: column;
+    z-index: 30;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #000000a6;
+}
+.comic-card > button {
+    background-color: #f3d403;
+}
+.card-title {
+    color: white;
+    text-align: center;
+}
+#tag-rare {
+    background-color: yellow;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 12px;
+}
