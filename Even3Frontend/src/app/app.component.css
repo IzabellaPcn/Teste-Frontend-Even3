@@ -1,5 +1,5 @@
 app-root {
-    font-family: Arial;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;;
 }
 header {
     display: flex;
@@ -11,7 +11,6 @@ nav {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    font-size: 17px;
 }
 nav > a {
     color: white;

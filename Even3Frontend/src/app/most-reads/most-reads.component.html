@@ -1,4 +1,4 @@
-<div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center">
+<div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; background-color: black">
   <div *ngFor="let comic of comics_more;" class="card" style="margin: 10px; width: 300px; height: 450px;">
     <img class="card-img-top" [src]="comic.thumbnail.path.concat('/portrait_uncanny.jpg')" alt="Card image cap">
     <div class="card-body comic-card">
@@ -18,8 +18,13 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
-        Formato: {{ current_comic.format }}
+      <div class="modal-body" style="width: 100%; align-items: center; justify-content: center">
+        <ul class="list-group list-group-flush" style="align-items: center; justify-content: center">
+          <div class="list-group-item">Formato: {{ current_comic.format }}</div>
+          <div class="list-group-item">Descrição: {{ current_comic.description }}</div>
+          <div class="list-group-item">Edição: {{ current_comic.issueNumber }}</div>
+          <div class="list-group-item"> Páginas: {{ current_comic.pageCount }}</div>
+        </ul>
       </div>
     </div>
   </div>
